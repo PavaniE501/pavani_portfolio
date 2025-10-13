@@ -1,10 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send, User } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithubAlt,
+  FaGithubSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +23,9 @@ const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -24,7 +33,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    emailjs
+   emailjs
       .send(
         "service_2lpaut4", // ✅ your service ID
         "template_2163k94", // ✅ your updated template ID
@@ -52,36 +61,25 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     {
-      icon: <FaInstagram />,
-      href: "https://www.instagram.com/yourprofile",
-      color: "from-pink-500 to-yellow-400",
+      icon: <FaGithubSquare />,
+      href: "https://github.com/PavaniE501/",
+      color: "from-pink-500 to-orange-400",
       delay: 0,
     },
     {
       icon: <FaLinkedin />,
-      href: "https://www.linkedin.com/in/yourprofile",
-      color: "from-blue-500 to-cyan-400",
+      href: "https://www.linkedin.com/in/pavani-enjamoori-61b2a41a2/",
+      color: "from-cyan-500 to-blue-500",
       delay: 0.2,
     },
-    {
-      icon: <FaTwitter />,
-      href: "https://twitter.com/yourprofile",
-      color: "from-sky-400 to-blue-600",
-      delay: 0.4,
-    },
-    {
-      icon: <FaWhatsapp />,
-      href: "https://wa.me/919441275014",
-      color: "from-green-400 to-emerald-600",
-      delay: 0.6,
-    },
+    
   ];
 
   return (
-    <section className="relative min-h-screen py-24 px-6 md:px-20 text-gray-200 overflow-hidden bg-[#020617]">
-      {/* Background Accents */}
-      <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-400 via-blue-600 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+    <section className="relative min-h-screen py-24 px-6 md:px-20 text-gray-200 overflow-hidden bg-gradient-to-b from-[#050510] via-[#0a0a1a] to-[#050510]">
+      {/* Glowing Backgrounds */}
+      <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-400 via-blue-500 to-emerald-500 rounded-full blur-[180px] opacity-30 animate-[pulse_6s_ease-in-out_infinite]"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tr from-emerald-500 via-blue-600 to-cyan-400 rounded-full blur-[160px] opacity-30 animate-[pulse_6s_ease-in-out_infinite]"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT: Contact Info */}
@@ -91,31 +89,24 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-            Let's Connect
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 animate-shine">
+            Let’s Connect
           </h2>
 
           <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
-            Have an idea, opportunity, or collaboration in mind? I’m always open to
-            discussing exciting projects or innovations. Let’s create something amazing together.
+            Have an idea, opportunity, or collaboration in mind? I’m always open
+            to discussing exciting projects or innovations. Let’s create
+            something amazing together.
           </p>
 
           <div className="mt-10 space-y-5 text-gray-300">
             <div className="flex items-center gap-4">
               <Mail className="text-cyan-400 w-6 h-6" />
-              <span className="text-lg">durgesh.techie@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Phone className="text-cyan-400 w-6 h-6" />
-              <span className="text-lg">+91 9441275014</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <MapPin className="text-cyan-400 w-6 h-6" />
-              <span className="text-lg">India / Germany (relocating)</span>
+              <span className="text-lg">pavanienjamoori@gmail.com</span>
             </div>
           </div>
 
-          {/* Social Media Icons */}
+          {/* Social Media Links */}
           <div className="flex gap-6 mt-10">
             {socialLinks.map((social, index) => (
               <motion.a
@@ -140,7 +131,7 @@ const Contact: React.FC = () => {
                 }}
                 whileHover={{ scale: 1.25, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-                className={`p-4 rounded-full bg-gradient-to-tr ${social.color} shadow-lg shadow-cyan-500/30 text-white text-2xl transition-transform`}
+                className={`p-4 rounded-full bg-gradient-to-tr ${social.color} shadow-lg shadow-emerald-400/30 text-white text-2xl transition-transform`}
               >
                 {social.icon}
               </motion.a>
@@ -154,47 +145,44 @@ const Contact: React.FC = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl space-y-6"
+          className="relative bg-black/60 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl space-y-6"
         >
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-purple-600/5 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-blue-600/10 to-emerald-500/10 pointer-events-none"></div>
 
-          {/* Name Field with Icon */}
           <div>
-            <label className="block text-sm font-semibold mb-2">Full Name</label>
-            <div className="relative">
-              <User className="absolute left-3 top-3.5 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Enter your full name"
-                className="w-full bg-black/40 border border-gray-700 rounded-lg pl-10 pr-4 py-3 text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-            </div>
+            <label className="block text-sm font-semibold mb-2">
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              placeholder="Enter your full name"
+              className="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
           </div>
 
-          {/* Email Field with Icon */}
           <div>
-            <label className="block text-sm font-semibold mb-2">Email Address</label>
-            <div className="relative">
-              <Mail className="absolute left-3 top-3.5 text-gray-400 w-5 h-5" />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="you@example.com"
-                className="w-full bg-black/40 border border-gray-700 rounded-lg pl-10 pr-4 py-3 text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-            </div>
+            <label className="block text-sm font-semibold mb-2">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="you@example.com"
+              className="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
           </div>
 
-          {/* Message Field */}
           <div>
-            <label className="block text-sm font-semibold mb-2">Your Message</label>
+            <label className="block text-sm font-semibold mb-2">
+              Your Message
+            </label>
             <textarea
               name="message"
               value={formData.message}
@@ -205,13 +193,12 @@ const Contact: React.FC = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={isLoading}
-            className="w-full flex items-center justify-center gap-3 py-3 px-5 text-lg font-semibold rounded-lg text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 shadow-md hover:shadow-cyan-400/30 transition-all duration-300"
+            className="w-full flex items-center justify-center gap-3 py-3 px-5 text-lg font-semibold rounded-lg text-white bg-gradient-to-r from-cyan-500 via-blue-500 to-emerald-500 shadow-md hover:shadow-cyan-400/40 transition-all duration-300"
           >
             {isLoading ? "Sending..." : "Send Message"}
             {!isLoading && <Send className="w-5 h-5" />}
@@ -221,13 +208,43 @@ const Contact: React.FC = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-green-400 text-center font-medium mt-4"
+              className="text-emerald-400 text-center font-medium mt-4"
             >
               ✅ Message Sent Successfully!
             </motion.p>
           )}
         </motion.form>
       </div>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes pulse {
+          0%,
+          100% {
+            transform: scale(1);
+            opacity: 0.3;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.5;
+          }
+        }
+        .animate-[pulse_6s_ease-in-out_infinite] {
+          animation: pulse 6s ease-in-out infinite;
+        }
+        @keyframes shine {
+          0% {
+            background-position: -200% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
+        }
+        .animate-shine {
+          background-size: 200% auto;
+          animation: shine 3s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };

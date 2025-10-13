@@ -11,10 +11,10 @@ const poppins = Poppins({
 });
 
 const Hero: React.FC = () => {
-  const fullName = "Nikhil Durgesh Katta";
+  const fullName = "Enjamoori Pavani";
   const [typedName, setTypedName] = useState("");
 
-  // Typing + looping animation for name
+  // Typing animation for name
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -35,14 +35,14 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#020617] text-gray-100 px-8 md:px-20 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0A0A0A] text-gray-100 px-8 md:px-20 overflow-hidden">
         {/* === BACKGROUND GRADIENT BLOBS === */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Top-left blob */}
-          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-cyan-400 via-blue-600 to-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+          {/* Top-left blob (greenish-cyan glow) */}
+          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-green-400 via-emerald-500 to-cyan-600 rounded-full blur-3xl opacity-25 animate-pulse"></div>
 
-          {/* Bottom-right blob */}
-          <div className="absolute bottom-[-120px] right-[-100px] w-[600px] h-[600px] bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+          {/* Bottom-right blob (cyan-blue glow) */}
+          <div className="absolute bottom-[-120px] right-[-100px] w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500 via-blue-600 to-emerald-700 rounded-full blur-3xl opacity-25 animate-pulse"></div>
         </div>
 
         {/* === LEFT: Text === */}
@@ -55,16 +55,16 @@ const Hero: React.FC = () => {
           <h1
             className={`${poppins.className} text-5xl md:text-6xl font-bold leading-tight`}
           >
-            <span className="block text-gray-300">Hi, I’m</span>
+            <span className="block text-gray-300">Hi There,</span>
 
             {/* Animated Name with shine effect */}
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent transition-transform duration-300 ease-in-out hover:scale-110 animate-shine">
+            <span className="block bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent transition-transform duration-300 ease-in-out hover:scale-110 animate-shine">
               {typedName}
             </span>
 
-            {/* Continuously Animated Subtitle */}
-            <span className="block text-xl md:text-2xl font-semibold bg-gradient-to-r from-green-400 via-yellow-400 to-pink-500 bg-clip-text text-transparent mt-2 animate-shine">
-              Certified Python Developer
+            {/* Subtitle with gradient text */}
+            <span className="block text-xl md:text-2xl font-semibold bg-gradient-to-r from-cyan-400 via-green-400 to-emerald-500 bg-clip-text text-transparent mt-2 animate-shine">
+              React Native Developer
             </span>
           </h1>
 
@@ -80,9 +80,9 @@ const Hero: React.FC = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="/Resume_NikhilDurgesh.pdf"
+              href="/Enjamoori_Pavani_Resume.pdf"
               download
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg hover:shadow-cyan-400/30 transition-all hover:scale-105"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-green-400 to-cyan-500 text-white font-semibold shadow-lg hover:shadow-cyan-400/30 transition-all hover:scale-105"
             >
               📄 Download CV
             </a>
@@ -103,11 +103,11 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[6px] border-transparent bg-gradient-to-tr from-cyan-500 via-blue-600 to-purple-600 p-[3px] shadow-[0_0_50px_rgba(59,130,246,0.5)]">
+          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[6px] border-transparent bg-gradient-to-tr from-green-400 via-cyan-500 to-blue-600 p-[3px] shadow-[0_0_50px_rgba(6,182,212,0.5)]">
             <div className="w-full h-full rounded-full overflow-hidden bg-black relative">
               <Image
-                src={require("../assets/nikhil.jpg")}
-                alt="Nikhil Durgesh Katta"
+                src={require("../assets/pavani1.jpg")}
+                alt="Enjamoori Pavani"
                 fill
                 className="object-cover"
                 priority
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* === Continuous shine animation === */}
+      {/* === Continuous Shine Animation === */}
       <style jsx>{`
         @keyframes shine {
           0% {

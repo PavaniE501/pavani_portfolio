@@ -3,35 +3,35 @@
 import { motion } from "framer-motion";
 
 const About: React.FC = () => {
-  const skills = ["Python", "Machine Learning", "AI", "OTT platforms"];
+  const skills = ["Python", "Machine Learning", "AI", "OTT Platforms"];
   const imageUrl =
     "https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg";
 
   return (
     <section
       id="about"
-      className="relative py-24 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-black via-gray-950 to-black text-gray-300 overflow-hidden"
+      className="relative py-24 px-6 md:px-12 lg:px-20 bg-[#0A0A0A] text-gray-300 overflow-hidden"
     >
       {/* Background Image Layer */}
       <div className="absolute inset-0">
         <img
           src={imageUrl}
           alt="Background"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-gray-950/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/95"></div>
       </div>
 
       {/* Floating Gradient Blobs */}
-      <div className="absolute -top-32 -left-24 w-[400px] h-[400px] bg-gradient-to-tr from-purple-600 via-pink-500 to-red-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-700 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+      <div className="absolute -top-40 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-green-400 via-emerald-500 to-cyan-600 rounded-full blur-3xl opacity-25 animate-pulse"></div>
+      <div className="absolute bottom-[-150px] right-[-120px] w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500 via-blue-600 to-emerald-700 rounded-full blur-3xl opacity-25 animate-pulse"></div>
 
       {/* Content */}
       <div className="relative max-w-5xl mx-auto text-center md:text-left">
         {/* Heading */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -52,7 +52,7 @@ const About: React.FC = () => {
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 mx-1"
+              className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 mx-1"
             >
               {skill}
             </span>
@@ -65,10 +65,10 @@ const About: React.FC = () => {
           applications.
           <br />
           <br />
-          My approach combines elegant UI/UX design, efficient code architecture,
-          and a deep curiosity for emerging technologies. I’m constantly learning
-          and evolving to craft modern, seamless experiences across both web and
-          mobile platforms.
+          My approach blends elegant UI/UX design, efficient code architecture,
+          and a curiosity for emerging technologies. I constantly learn and evolve
+          to build modern, seamless experiences across both web and mobile
+          platforms.
         </motion.p>
 
         {/* Accent Divider */}
@@ -76,7 +76,7 @@ const About: React.FC = () => {
           initial={{ width: 0, opacity: 0 }}
           whileInView={{ width: "100%", opacity: 1 }}
           transition={{ duration: 1 }}
-          className="mt-10 h-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-full"
+          className="mt-10 h-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 rounded-full"
         ></motion.div>
       </div>
     </section>

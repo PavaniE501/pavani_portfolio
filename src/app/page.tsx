@@ -1,7 +1,6 @@
 // src/app/page.tsx
 
 import About from "@/components/About";
-import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
@@ -43,11 +42,6 @@ export default function HomePage() {
       <section id="projects">
         <Projects />
       </section>
-
-      <section id="certifications">
-        <Certifications />
-      </section>
-
 
       <section id="services">
         <Services />

@@ -49,22 +49,22 @@ const Header: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/20 shadow-lg"
+      className="fixed top-0 left-0 w-full z-50 bg-[#0A0A0A]/70 backdrop-blur-xl border-b border-cyan-500/30 shadow-[0_0_25px_rgba(6,182,212,0.3)]"
     >
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* LOGO */}
+        {/* === LOGO === */}
         <motion.h1
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="text-3xl font-extrabold tracking-tight"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_12px_rgba(56,189,248,0.7)]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 drop-shadow-[0_0_12px_rgba(56,189,248,0.7)]">
             MyPortfolio
           </span>
         </motion.h1>
 
-        {/* DESKTOP MENU */}
+        {/* === DESKTOP MENU === */}
         <ul className="hidden md:flex space-x-10">
           {menuItems.map((item, index) => (
             <motion.li
@@ -77,27 +77,29 @@ const Header: React.FC = () => {
               }}
               whileHover={{
                 scale: 1.15,
-                color: "#38bdf8",
+                color: "#22d3ee", // cyan
                 textShadow: "0px 0px 10px rgba(56,189,248,0.8)",
               }}
               className={`relative text-lg font-semibold cursor-pointer transition-all ${
-                activeSection === item.id ? "text-cyan-400" : "text-white"
+                activeSection === item.id
+                  ? "text-cyan-400"
+                  : "text-gray-200 hover:text-cyan-300"
               }`}
               onClick={() => handleMenuClick(item)}
             >
               {item.name}
-              {/* Glowing underline */}
+              {/* Gradient Underline for Active Section */}
               {activeSection === item.id && (
                 <motion.span
                   layoutId="underline"
-                  className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-[0_0_8px_rgba(56,189,248,0.7)]"
+                  className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 rounded-full shadow-[0_0_8px_rgba(56,189,248,0.7)]"
                 />
               )}
             </motion.li>
           ))}
         </ul>
 
-        {/* MOBILE MENU ICON */}
+        {/* === MOBILE MENU ICON === */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -105,11 +107,15 @@ const Header: React.FC = () => {
           className="md:hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X className="text-white w-7 h-7" /> : <Menu className="text-white w-7 h-7" />}
+          {isOpen ? (
+            <X className="text-cyan-400 w-7 h-7" />
+          ) : (
+            <Menu className="text-cyan-400 w-7 h-7" />
+          )}
         </motion.div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* === MOBILE MENU OVERLAY === */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -117,7 +123,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="md:hidden absolute top-[72px] left-0 w-full bg-black/60 backdrop-blur-xl border-t border-white/20"
+            className="md:hidden absolute top-[72px] left-0 w-full bg-[#0A0A0A]/90 backdrop-blur-xl border-t border-cyan-500/30 shadow-[0_0_25px_rgba(6,182,212,0.3)]"
           >
             <ul className="flex flex-col items-center py-8 space-y-6">
               {menuItems.map((item, index) => (
@@ -128,11 +134,13 @@ const Header: React.FC = () => {
                   transition={{ delay: index * 0.15, duration: 0.5 }}
                   whileHover={{
                     scale: 1.1,
-                    color: "#38bdf8",
+                    color: "#22d3ee",
                     textShadow: "0px 0px 10px rgba(56,189,248,0.9)",
                   }}
                   className={`text-xl font-semibold cursor-pointer ${
-                    activeSection === item.id ? "text-cyan-400" : "text-white"
+                    activeSection === item.id
+                      ? "text-cyan-400"
+                      : "text-gray-200 hover:text-cyan-300"
                   }`}
                   onClick={() => handleMenuClick(item)}
                 >
