@@ -48,17 +48,9 @@ const Projects = () => {
       image:
         "https://automaticaddison.com/wp-content/uploads/2021/03/human_pose_gif-1.gif",
     },
+    
     {
       id: 4,
-      title: "E-Commerce Shopping App",
-      description:
-        "A complete mobile e-commerce solution built with React Native and Firebase, featuring real-time product listings, cart management, secure payments, and personalized recommendations. Designed for a fast, intuitive, and responsive shopping experience.",
-      tech: ["React Native", "Firebase", "Stripe", "Redux", "Node.js"],
-      github: "#",
-      image: "https://deorwineblog.b-cdn.net/uploads/2019/06/e-com-app.jpg",
-    },
-    {
-      id: 5,
       title: "AI Voice Assistant",
       description:
         "An intelligent AI-powered voice assistant app built using React Native and OpenAI API. Supports natural voice interaction, task automation, and real-time speech recognition with dynamic UI feedback.",
