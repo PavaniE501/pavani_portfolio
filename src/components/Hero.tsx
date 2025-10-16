@@ -5,27 +5,47 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 const Hero: React.FC = () => {
-  const fullName = "Enjamoori Pavani";
-  const [typedName, setTypedName] = useState("");
+  const titles = ["Frontend Developer", "React Native & React JS Specialist"];
+  const [displayText, setDisplayText] = useState("");
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  // Typing animation for name
   useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setTypedName(fullName.slice(0, i));
-      i++;
-      if (i > fullName.length) i = 0;
-    }, 150);
-    return () => clearInterval(interval);
-  }, []);
+    const currentTitle = titles[titleIndex];
+    const typingSpeed = isDeleting ? 60 : 120;
 
-  // Smooth scroll to About section
+    const handleTyping = () => {
+      if (!isDeleting) {
+        // Typing forward
+        if (displayText.length < currentTitle.length) {
+          setDisplayText(currentTitle.slice(0, displayText.length + 1));
+        } else {
+          // Wait before deleting
+          setTimeout(() => setIsDeleting(true), 1200);
+        }
+      } else {
+        // Deleting backward
+        if (displayText.length > 0) {
+          setDisplayText(currentTitle.slice(0, displayText.length - 1));
+        } else {
+          // Switch to next title
+          setIsDeleting(false);
+          setTitleIndex((prev) => (prev + 1) % titles.length);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, titleIndex]);
+
   const handleScrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
@@ -56,28 +76,29 @@ const Hero: React.FC = () => {
             className={`${poppins.className} text-5xl md:text-6xl font-bold leading-tight`}
           >
             <span className="block text-gray-300">Hi There,</span>
-
-            {/* Animated Name with shine effect */}
             <span className="block bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent transition-transform duration-300 ease-in-out hover:scale-110 animate-shine">
-              {typedName}
+              Enjamoori Pavani
             </span>
 
             {/* Subtitle with gradient text */}
             <span className="block text-xl md:text-2xl font-semibold bg-gradient-to-r from-cyan-400 via-green-400 to-emerald-500 bg-clip-text text-transparent mt-2 animate-shine">
-              React Native Developer
+              {displayText}
+              <span className="border-r-2 border-cyan-400 ml-1 animate-pulse"></span>
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-            Front-End Developer specializing in OTT & AI-powered digital
-            experiences. With over{" "}
+            Passionate{" "}
             <span className="text-cyan-400 font-semibold">
-              1 year of hands-on
-            </span>{" "}
-            development.
+              React Native & React JS Specialist
+            </span>
+            . I build seamless, high-performance mobile and web applications.
+            With over{" "}
+            <span className="text-cyan-400 font-semibold">3 years</span> of
+            hands-on experience, I have worked on OTT platforms, real-time
+            tracking, and interactive interfaces.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             <a
               href="/Enjamoori_Pavani_Resume.pdf"

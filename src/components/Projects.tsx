@@ -23,7 +23,8 @@ const Projects = () => {
         "Objective-C",
         "Firebase",
       ],
-      android: "https://play.google.com/store/apps/details?id=com.etvwin.mobile",
+      android:
+        "https://play.google.com/store/apps/details?id=com.etvwin.mobile",
       ios: "https://apps.apple.com/us/app/etv-win/id1245077673",
       image:
         "https://cdn.dribbble.com/userupload/8425514/file/original-24c406741835ce6da3983f41807c7bf3.jpg?format=webp&resize=400x300&vertical=center",
@@ -44,20 +45,20 @@ const Projects = () => {
       description:
         "A computer vision web application leveraging OpenCV and MediaPipe to detect and correct skewed posters in real-time, ensuring precise alignment and perspective correction through on-device ML models.",
       tech: ["Python", "OpenCV", "Mediapipe"],
-      github: "#",
+      github: "https://github.com/PavaniE501/Music_Player_React_Native",
       image:
-        "https://automaticaddison.com/wp-content/uploads/2021/03/human_pose_gif-1.gif",
+        "https://i.pinimg.com/originals/a0/f9/9b/a0f99b1771e05f82c37d641324a3b1a8.gif",
     },
-    
+
     {
       id: 4,
       title: "AI Voice Assistant",
       description:
         "An intelligent AI-powered voice assistant app built using React Native and OpenAI API. Supports natural voice interaction, task automation, and real-time speech recognition with dynamic UI feedback.",
       tech: ["React Native", "OpenAI API", "Speech Recognition", "Firebase"],
-      github: "https://github.com/nikhildurgesh0915/VoiceAssistant",
-      image:
-        "https://builtin.com/sites/www.builtin.com/files/2023-08/ai-assistant_0.jpg",
+      github:
+        "https://github.com/PavaniE501/VoiceAssistant/tree/main/VoiceAssistant",
+      image: "https://i.ytimg.com/vi/Q_pz4xFow3Q/maxresdefault.jpg",
     },
   ];
 

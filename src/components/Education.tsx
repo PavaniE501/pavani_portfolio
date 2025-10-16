@@ -16,7 +16,7 @@ const Education = () => {
   },
   {
     id: 2,
-    degree: "State Board of Technical Education And Training",
+    degree: "State Board of Technical Education & Training in Computer Engineering",
     institution: "Kamala Nehru Polytechnic For Women - Hyderabad",
     duration: "2016 – 2019",
     score: "Percentage: 82%",

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 const About: React.FC = () => {
-  const skills = ["Python", "Machine Learning", "AI", "OTT Platforms"];
   const imageUrl =
     "https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg";
 
@@ -38,37 +37,33 @@ const About: React.FC = () => {
           About Me
         </motion.h2>
 
-        {/* Paragraph */}
+        {/* Paragraph Content */}
         <motion.p
-          className="leading-relaxed text-lg md:text-xl text-gray-100"
+          className="text-lg md:text-xl text-gray-100 leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          I’m{" "}
-          <span className="font-semibold text-white">Nikhil Durgesh Katta</span>, a
-          passionate and driven developer deeply interested in technology and
-          innovation. My expertise lies in{" "}
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 mx-1"
-            >
-              {skill}
-            </span>
-          ))}
-          . I have{" "}
-          <span className="font-medium text-cyan-400">1+ year of experience</span>{" "}
-          in front-end mobile application development — particularly{" "}
-          <span className="font-medium text-cyan-400">OTT platforms</span> — where
-          I focus on creating intuitive, high-performance, and visually engaging
-          applications.
-          <br />
-          <br />
-          My approach blends elegant UI/UX design, efficient code architecture,
-          and a curiosity for emerging technologies. I constantly learn and evolve
-          to build modern, seamless experiences across both web and mobile
-          platforms.
+          I’m <span className="font-semibold text-white">Enjamoori Pavani</span>
+          , a frontend developer with over{" "}
+          <span className="text-cyan-400 font-medium">3 years</span> of
+          experience building mobile and web apps using{" "}
+          <span className="text-cyan-400 font-medium">React Native</span> and{" "}
+          <span className="text-cyan-400 font-medium">React JS</span>. I’ve
+          worked on end-to-end app development for both Android and iOS,
+          including{" "}
+          <span className="text-cyan-400 font-medium">OTT platforms</span>, push
+          notifications, and API integration. I’m proficient with tools like{" "}
+          <span className="text-cyan-400 font-medium">VSCode</span>,{" "}
+          <span className="text-cyan-400 font-medium">Android Studio</span>,{" "}
+          <span className="text-cyan-400 font-medium">Git</span>, and
+          experienced in{" "}
+          <span className="text-cyan-400 font-medium">JavaScript</span>,{" "}
+          <span className="text-cyan-400 font-medium">TypeScript</span>,{" "}
+          <span className="text-cyan-400 font-medium">HTML5</span>, and{" "}
+          <span className="text-cyan-400 font-medium">CSS</span>. I’m passionate
+          about building high-quality, user-friendly apps and constantly
+          exploring new challenges.
         </motion.p>
 
         {/* Accent Divider */}
