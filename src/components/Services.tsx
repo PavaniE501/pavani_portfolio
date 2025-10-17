@@ -22,10 +22,16 @@ const services = [
       "Building responsive, modern, and scalable websites using HTML, CSS, JS, and React.",
   },
   {
-    name: "Python / AI",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    name: "Frontend Frameworks",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     description:
-      "Developing AI solutions, automation scripts, and backend services with Python.",
+      "Creating dynamic and interactive frontends with JavaScript and modern frameworks like React and React Native.",
+  },
+  {
+    name: "State Management",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    description:
+      "Implementing efficient state management using Redux, Redux Toolkit, and React Context API for scalable applications.",
   },
   {
     name: "Node.js / Backend",
@@ -39,13 +45,8 @@ const services = [
     description:
       "Implementing scalable database solutions using MongoDB for web and mobile apps.",
   },
-  {
-    name: "Frontend Frameworks",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    description:
-      "Creating dynamic and interactive frontends with JavaScript and modern frameworks.",
-  },
 ];
+
 
 const Services: React.FC = () => {
   return (

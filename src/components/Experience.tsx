@@ -7,19 +7,19 @@ const experiences = [
   {
     company: "Colour Moon Technologies",
     role: "React Native Developer",
-    duration: "Nov 2024 – Present",
+    duration: "Oct 2024 – Present",
     mode: "On-site",
     description:
       "Developing high-quality mobile applications with seamless UI/UX. Implementing custom video players, offline HLS downloads, and interactive OTT features ensuring performance and smooth experience.",
     icon: <Briefcase className="w-6 h-6 text-white" />,
   },
   {
-    company: "Edu-Versity",
-    role: "Machine Learning Intern",
-    duration: "1 Month",
-    mode: "Virtual",
+    company: "Harman Connected Services",
+    role: "Software Engineer",
+    duration: "Apr 2022 – Aug 2024",
+    mode: "Hybrid",
     description:
-      "Worked on building and training predictive models, gaining practical experience in data preprocessing and supervised learning during a virtual internship.",
+      "Developed and optimized React Native applications across multiple projects (Optimus, Niraxx, Heart Beam), focusing on reusable UI components, Redux state management, REST API integration, and performance optimization. Implemented features like video conferencing, payment gateways, offline workflows, and multi-language localization. Collaborated with cross-functional teams, utilized TDD with Jest, and maintained code quality through Git and Agile methodologies.",
     icon: <GraduationCap className="w-6 h-6 text-white" />,
   },
 ];

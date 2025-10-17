@@ -5,25 +5,27 @@ import { GraduationCap } from "lucide-react";
 
 const Education = () => {
  const educationData = [
-  {
-    degree: "Bachelor of Technology (B.Tech) in Computer Science and Engineering",
-    institution:
-      "Vardhaman College of Engineering(AUTONOMOUS), Shamshabad",
-    duration: "2019 – 2022",
-    score: "CGPA: 7.4 / 10",
-    description:
-      "Graduated with a strong foundation in Computer Science, specializing in Artificial Intelligence, Data Science, and Software Engineering. Developed hands-on expertise through academic and industry projects.",
-  },
-  {
-    id: 2,
-    degree: "State Board of Technical Education & Training in Computer Engineering",
-    institution: "Kamala Nehru Polytechnic For Women - Hyderabad",
-    duration: "2016 – 2019",
-    score: "Percentage: 82%",
-    description:
-      "Graduated with a strong foundation in Computer Engineering. Developed practical skills and hands-on expertise through academic and industry projects.",
-  },
-];
+   {
+     id: 1,
+     degree:
+       "Bachelor of Technology (B.Tech) in Computer Science and Engineering",
+     institution: "Vardhaman College of Engineering(AUTONOMOUS), Shamshabad",
+     duration: "2019 – 2022",
+     score: "CGPA: 7.4 / 10",
+     description:
+       "Graduated with a strong foundation in Computer Science, specializing in Artificial Intelligence, Data Science, and Software Engineering. Developed hands-on expertise through academic and industry projects.",
+   },
+   {
+     id: 2,
+     degree:
+       "State Board of Technical Education & Training in Computer Engineering",
+     institution: "Kamala Nehru Polytechnic For Women - Hyderabad",
+     duration: "2016 – 2019",
+     score: "Percentage: 82%",
+     description:
+       "Graduated with a strong foundation in Computer Engineering. Developed practical skills and hands-on expertise through academic and industry projects.",
+   },
+ ];
 
 
   return (

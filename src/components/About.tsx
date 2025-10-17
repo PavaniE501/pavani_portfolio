@@ -45,8 +45,8 @@ const About: React.FC = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           I’m <span className="font-semibold text-white">Enjamoori Pavani</span>
-          , a frontend developer with over{" "}
-          <span className="text-cyan-400 font-medium">3 years</span> of
+          , a frontend developer with{" "}
+          <span className="text-cyan-400 font-medium">3+ years</span> of
           experience building mobile and web apps using{" "}
           <span className="text-cyan-400 font-medium">React Native</span> and{" "}
           <span className="text-cyan-400 font-medium">React JS</span>. I’ve

@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  FaGithubAlt,
-  FaGithubSquare,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -33,17 +26,17 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsLoading(true);
 
-   emailjs
+    emailjs
       .send(
-        "service_2lpaut4", // ✅ your service ID
-        "template_2163k94", // ✅ your updated template ID
+        "service_tj7h5qm", // ✅ your service ID
+        "template_93624ek", // ✅ your updated template ID
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
           reply_to: formData.email,
         },
-        "oUxGPhPy-FgI18JqT" // ✅ your public key
+        "pioNQMk782JvEOADP" // ✅ your public key
       )
       .then(
         () => {
@@ -72,7 +65,6 @@ const Contact: React.FC = () => {
       color: "from-cyan-500 to-blue-500",
       delay: 0.2,
     },
-    
   ];
 
   return (

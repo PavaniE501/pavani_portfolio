@@ -27,35 +27,30 @@ const Projects = () => {
         "https://play.google.com/store/apps/details?id=com.etvwin.mobile",
       ios: "https://apps.apple.com/us/app/etv-win/id1245077673",
       image:
-        "https://cdn.dribbble.com/userupload/8425514/file/original-24c406741835ce6da3983f41807c7bf3.jpg?format=webp&resize=400x300&vertical=center",
+        "https://cdn.dribbble.com/userupload/10727581/file/original-558a95aea9d61c46a3f6e9b1c683d776.png",
     },
     {
       id: 2,
-      title: "Dynamic App Icon Changer",
+      title: "Music Player App",
       description:
-        "An interactive mobile application enabling dynamic app icon switching based on real-time Firebase configurations. Built with React Native and Firebase Remote Config for flexible UI personalization.",
-      tech: ["React Native", "Firebase", "Remote Config"],
-      github:
-        "https://github.com/nikhildurgesh0915/react-native-dynamic-icon-switcher",
-      image: "https://i.ytimg.com/vi/412lSuyUJ_4/maxresdefault.jpg",
-    },
-    {
-      id: 3,
-      title: "Poster Rectifier using OpenCV & Mediapipe",
-      description:
-        "A computer vision web application leveraging OpenCV and MediaPipe to detect and correct skewed posters in real-time, ensuring precise alignment and perspective correction through on-device ML models.",
-      tech: ["Python", "OpenCV", "Mediapipe"],
+        "A feature-rich mobile music player built with React Native CLI, enabling users to play, pause, skip, and loop songs, along with interactive song sliders and Android notifications for seamless playback control.",
+      tech: ["React Native CLI", "Redux", "JavaScript"],
       github: "https://github.com/PavaniE501/Music_Player_React_Native",
       image:
         "https://i.pinimg.com/originals/a0/f9/9b/a0f99b1771e05f82c37d641324a3b1a8.gif",
     },
 
     {
-      id: 4,
+      id: 3,
       title: "AI Voice Assistant",
       description:
         "An intelligent AI-powered voice assistant app built using React Native and OpenAI API. Supports natural voice interaction, task automation, and real-time speech recognition with dynamic UI feedback.",
-      tech: ["React Native", "OpenAI API", "Speech Recognition", "Firebase"],
+      tech: [
+        "React Native",
+        "OpenAI API",
+        "Speech Recognition",
+        "Tailwind CSS",
+      ],
       github:
         "https://github.com/PavaniE501/VoiceAssistant/tree/main/VoiceAssistant",
       image: "https://i.ytimg.com/vi/Q_pz4xFow3Q/maxresdefault.jpg",

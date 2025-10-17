@@ -93,9 +93,8 @@ const Hero: React.FC = () => {
               React Native & React JS Specialist
             </span>
             . I build seamless, high-performance mobile and web applications.
-            With over{" "}
-            <span className="text-cyan-400 font-semibold">3 years</span> of
-            hands-on experience, I have worked on OTT platforms, real-time
+            With <span className="text-cyan-400 font-semibold">3+ years</span>{" "}
+            of hands-on experience, I have worked on OTT platforms, real-time
             tracking, and interactive interfaces.
           </p>
 
@@ -130,7 +129,7 @@ const Hero: React.FC = () => {
                 src={require("../assets/pavani1.jpg")}
                 alt="Enjamoori Pavani"
                 fill
-                className="object-cover"
+                className="object-cover object-top -translate-y-2"
                 priority
               />
             </div>
