@@ -4,12 +4,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 
-// ✅ Dynamically import icons to avoid SSR issues
-const SiJavascript = dynamic(() => import("react-icons/si").then(mod => mod.SiJavascript), { ssr: false });
-const SiTypescript = dynamic(() => import("react-icons/si").then(mod => mod.SiTypescript), { ssr: false });
-const SiReact = dynamic(() => import("react-icons/si").then(mod => mod.SiReact), { ssr: false });
-const SiRedux = dynamic(() => import("react-icons/si").then(mod => mod.SiRedux), { ssr: false });
-const SiNodedotjs = dynamic(() => import("react-icons/si").then(mod => mod.SiNodedotjs), { ssr: false });
+// Dynamically import icons only for SSR-safe usage
+const SiJavascript = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiJavascript),
+  { ssr: false }
+);
+const SiTypescript = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiTypescript),
+  { ssr: false }
+);
+const SiReact = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiReact),
+  { ssr: false }
+);
+const SiRedux = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiRedux),
+  { ssr: false }
+);
+const SiNodedotjs = dynamic(
+  () => import("react-icons/si").then((mod) => mod.SiNodedotjs),
+  { ssr: false }
+);
 const SiFirebase = dynamic(
   () => import("react-icons/si").then((mod) => mod.SiFirebase),
   { ssr: false }
@@ -24,26 +39,6 @@ const SiCss3 = dynamic(
 );
 const SiPython = dynamic(
   () => import("react-icons/si").then((mod) => mod.SiPython),
-  { ssr: false }
-);
-const SiOpencv = dynamic(
-  () => import("react-icons/si").then((mod) => mod.SiOpencv),
-  { ssr: false }
-);
-const SiTensorflow = dynamic(
-  () => import("react-icons/si").then((mod) => mod.SiTensorflow),
-  { ssr: false }
-);
-const SiPytorch = dynamic(
-  () => import("react-icons/si").then((mod) => mod.SiPytorch),
-  { ssr: false }
-);
-const SiNumpy = dynamic(
-  () => import("react-icons/si").then((mod) => mod.SiNumpy),
-  { ssr: false }
-);
-const SiPandas = dynamic(
-  () => import("react-icons/si").then((mod) => mod.SiPandas),
   { ssr: false }
 );
 const SiMysql = dynamic(
@@ -78,7 +73,14 @@ const SiHtml5 = dynamic(
   { ssr: false }
 );
 
-const skills = [
+// ✅ Type for skills
+type SkillType = {
+  name: string;
+  icon: React.ReactNode;
+};
+
+// ✅ Skills array
+const skills: SkillType[] = [
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "React Native", icon: <SiReact className="text-cyan-400" /> },
@@ -99,7 +101,7 @@ const skills = [
   { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
 ];
 
-const AnimatedSkill: React.FC<{ skill: any; index: number }> = ({
+const AnimatedSkill: React.FC<{ skill: SkillType; index: number }> = ({
   skill,
   index,
 }) => (
@@ -119,7 +121,7 @@ const AnimatedSkill: React.FC<{ skill: any; index: number }> = ({
 const Skills: React.FC = () => {
   return (
     <section className="relative py-24 px-6 md:px-20 text-gray-200 overflow-hidden bg-[#010d0c]">
-      {/* 🌌 Neon Glow Background */}
+      {/* Neon Glow Background */}
       <div className="absolute -top-48 -left-48 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,255,170,0.45)_0%,transparent_70%)] blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.35)_0%,transparent_70%)] blur-3xl"></div>
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
-
+import PavaniImage from "../assets/pavani1.jpg";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
           <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-[6px] border-transparent bg-gradient-to-tr from-green-400 via-cyan-500 to-blue-600 p-[3px] shadow-[0_0_50px_rgba(6,182,212,0.5)]">
             <div className="w-full h-full rounded-full overflow-hidden bg-black relative">
               <Image
-                src={require("../assets/pavani1.jpg")}
+                src={PavaniImage}
                 alt="Enjamoori Pavani"
                 fill
                 className="object-cover object-top -translate-y-2"
