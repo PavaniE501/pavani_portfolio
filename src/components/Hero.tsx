@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0A0A0A] text-gray-100 px-8 md:px-20 pt-20 md:pt-28 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-[#0A0A0A] text-gray-100 px-8 md:px-20 pt-20 md:pt-28 overflow-hidden ">
         {/* === BACKGROUND GRADIENT BLOBS === */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Top-left blob (greenish-cyan glow) */}
