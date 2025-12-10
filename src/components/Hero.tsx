@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
             tracking, and interactive interfaces.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-10">
             <a
               href="/Enjamoori_Pavani_Resume.pdf"
               download
